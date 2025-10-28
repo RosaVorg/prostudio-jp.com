@@ -44,22 +44,22 @@
     <h2 class="main-section-title">問合せ<br><span>Contact</span></h2>
     <p class="tc">内容を入力の上、送信ボタンを押して下さい</p>
     
-    <form class="form-style" action="" method="">
+    <form class="form-style" action="https://formspree.io/f/mvgweywy" method="POST">
       <div class="form-list">
         <p>お名前</p>
-        <input type="text" name="name" placeholder="田中 太郎" class="full-width-input">
+        <input type="text" name="name" placeholder="田中 太郎" class="full-width-input" required>
       </div>
       <div class="form-list">
         <p>メールアドレス</p>
-        <input type="email" name="mail" placeholder="mail@gmail.com" class="full-width-input">
+        <input type="email" name="mail" placeholder="mail@gmail.com" class="full-width-input" required>
       </div>
       <div class="form-list">
         <p>お問合せ項目</p>
-        <select name="">
-          <option value="">採用について</option>
-          <option value="">プライバシーポリシーについて</option>
-          <option value="">その他のお問合せ</option>
-          <option value="">ご意見（返信しておりません）</option>
+        <select name="topic" required>
+          <option value="採用について">採用について</option>
+          <option value="プライバシーポリシーについて">プライバシーポリシーについて</option>
+          <option value="その他のお問合せ">その他のお問合せ</option>
+          <option value="ご意見">ご意見（返信しておりません）</option>
         </select>
       </div>
       <div class="form-list">
@@ -67,9 +67,12 @@
           <p>お問合せ内容</p>
           <p id="char-count">0 / 1000</p>
         </div>
-        <textarea id="comment" name="comment" maxlength="1000" placeholder="お問い合わせ内容をご記入ください。（１０００文字まで）" class="full-width-input"></textarea>
+        <textarea id="comment" name="comment" maxlength="1000" placeholder="お問い合わせ内容をご記入ください。（１０００文字まで）" class="full-width-input" required></textarea>
       </div>
-      <p class="send-btn"><input type="submit" value="送信"></p>
+      <input type="hidden" name="_next" value="https://prostudio-jp.com/contact-thanks.html">
+      <p class="send-btn">
+        <input type="submit" value="送信">
+      </p>
     </form>
   </main>
   <script src="script.js"></script>
@@ -97,7 +100,6 @@
       <p class="footer-logo">合同会社ProStudio</p>
       <address>住所：〒150-0043 東京都渋谷区道玄坂1-16-6 二葉ビル8b</address>
       <p>メール：info@prostudio-jp.com</p>
-      <p class="footer-tel">TEL：XX-XXXX-XXXX</p>
     </div>
     <nav class="footer-nav flex">
       <ul class="footer-nav-list">

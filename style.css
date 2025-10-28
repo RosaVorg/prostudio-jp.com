@@ -474,3 +474,14 @@ body {
   bottom: 10px;
   right: 10px;
 }
+a.btn{
+  display : block;
+  padding : 10px 15px;
+  background : #FFF; /* ボタンの背景色 */
+  border-radius : 5px; /* 角を丸くする */
+  font-weight : bold;
+  font-size: 16px;
+}
+a.btn:hover{
+  background : #DDD; /* Topに戻るボタンの背景色 */
+}
